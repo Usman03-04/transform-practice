@@ -83,14 +83,45 @@ select:-webkit-autofill:focus {
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
+  background-image: url(../images/breaks-bg.jpg);
+  background-position: center center;
+  background-size: 300px 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
 
+.rom {
+  display: flex;
+  background-image: url(../images/interior=bg.jpg);
+  background-position: center center;
+  background-size:cover ;
+  background-repeat: no-repeat;
+  border: 20px ridge rgb(165, 95, 42);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.818);
+}
+.tabaqa {
+  border: 20px ridge rgb(165, 95, 42);
+  width: 200px;
+  height: 400px;
+  background-color: rgb(0, 0, 0, 0.5);
+  transition: transform 0.5s ease;
+}
+
+.tabaqa-left{
+  transform-origin: left center;
+}
+
+.tabaqa-right{
+  transform-origin: right center;
+}
+
+.rom:hover .tabaqa-left{
+  transform: perspective(1200px) rotateY(-140deg);
+}
+
+.rom:hover .tabaqa-right{
+  transform:perspective(1200px) rotateY(140deg);
 }
